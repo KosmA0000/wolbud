@@ -1,0 +1,134 @@
+# WOL-BUD v3: descriptive /oferta/ URLs; explicit old URLs redirect once.
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+RewriteEngine On
+
+RewriteRule ^kategorie/aglomarmur(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/aglomarmur/page/2(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/bramy\-garazowe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/bramy-garazowe/ [R=301,L,NE]
+RewriteRule ^kategorie/drewniane(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-drewniane/ [R=301,L,NE]
+RewriteRule ^kategorie/drzwi\-wewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/drzwi-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/drzwi\-zewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/drzwi-zewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/granit(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/marmur(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/moskitiery(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/moskitiery/ [R=301,L,NE]
+RewriteRule ^kategorie/okna\-pcv(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^kategorie/okna\-pcv\-domel(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^kategorie/parapety\-blaty(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-i-blaty/ [R=301,L,NE]
+RewriteRule ^kategorie/parapety\-wewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/parapety\-zewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/pcv\-wewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/rolety(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/oslony-okienne/ [R=301,L,NE]
+RewriteRule ^kategorie/stalowe\-aluminiowe\-zewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/stolarka\-aluminiowa(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/stolarka-aluminiowa/ [R=301,L,NE]
+RewriteRule ^kategorie/wewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^kategorie/zaluzje\-plisy(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/zaluzje-i-plisy/ [R=301,L,NE]
+RewriteRule ^kategorie/zewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-zewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/produkty/ [R=301,L,NE]
+RewriteRule ^produkty/adaptacyjne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-zewnetrzne/rolety-adaptacyjne/ [R=301,L,NE]
+RewriteRule ^produkty/aglomarmur(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/aluminiowe\-linia\-standard(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/parapet-aluminiowy/ [R=301,L,NE]
+RewriteRule ^produkty/aluminiowe\-linia\-zaokraglona(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/parapet-aluminiowy/ [R=301,L,NE]
+RewriteRule ^produkty/baltic\-brown(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/botticino(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/breccia\-aurora(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/breccia\-oniciata(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/calacata(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/carrara\-micro(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/crema\-marphil(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/do\-okien\-dachowych\-dekolux(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-do-okien-dachowych-dekolux/ [R=301,L,NE]
+RewriteRule ^produkty/drzwi\-wewnetrzne\-intenso(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/drzwi-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/drzwiowe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/moskitiery/moskitiery-drzwiowe/ [R=301,L,NE]
+RewriteRule ^produkty/dzien\-noc\-2(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-dzien-noc/ [R=301,L,NE]
+RewriteRule ^produkty/effectline(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^produkty/emperador\-dark(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/energetic\-83md(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^produkty/espaniola(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/fasady(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/stolarka-aluminiowa/fasady-aluminiowe/ [R=301,L,NE]
+RewriteRule ^produkty/forest\-brown(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/forest\-green(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/fusion(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^produkty/giallo\-reale(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/granit(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/infinity\-passive\-83md(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^produkty/kashmir\-gold(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/marmur(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/mini\-slim(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-mini-slim/ [R=301,L,NE]
+RewriteRule ^produkty/mini\-vegas(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-mini-vegas/ [R=301,L,NE]
+RewriteRule ^produkty/moskitiery\-okienne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/moskitiery/moskitiery-okienne/ [R=301,L,NE]
+RewriteRule ^produkty/moskitiery\-plisowane(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/moskitiery/moskitiery-plisowane/ [R=301,L,NE]
+RewriteRule ^produkty/multicolor\-red(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/nero\-marquina(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/nero\-portoro(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/nero\-zimbabwe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/new\-bianco\-cristal(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/new\-impala(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/new\-marfil(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/ogrody\-zimowe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/stolarka-aluminiowa/ [R=301,L,NE]
+RewriteRule ^produkty/okna\-drzwi\-alu(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/stolarka-aluminiowa/okna-i-drzwi-aluminiowe/ [R=301,L,NE]
+RewriteRule ^produkty/olimpo(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/parapet\-aluminiowy(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/parapet-aluminiowy/ [R=301,L,NE]
+RewriteRule ^produkty/parapet\-granit(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/parapet\-konglomerat\-kwarcowy(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-kwarcowy/ [R=301,L,NE]
+RewriteRule ^produkty/parapet\-konglomerat\-marmurowy(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/parapet\-mdf\-laminowany(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-mdf-laminowany/ [R=301,L,NE]
+RewriteRule ^produkty/parapet\-pvc(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-pvc/ [R=301,L,NE]
+RewriteRule ^produkty/parapet\-stalowy(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/parapet-stalowy/ [R=301,L,NE]
+RewriteRule ^produkty/pcv\-nakladka(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-pvc/ [R=301,L,NE]
+RewriteRule ^produkty/pcv\-wewnetrzne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-pvc/ [R=301,L,NE]
+RewriteRule ^produkty/perlato(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/plisy(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/zaluzje-i-plisy/plisy-okienne/ [R=301,L,NE]
+RewriteRule ^produkty/podtynkowe\-integro(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-zewnetrzne/rolety-podtynkowe-integro/ [R=301,L,NE]
+RewriteRule ^produkty/polare(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/rolety\-nadstawne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-zewnetrzne/rolety-nadstawne/ [R=301,L,NE]
+RewriteRule ^produkty/rolowane(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/bramy-garazowe/bramy-rolowane/ [R=301,L,NE]
+RewriteRule ^produkty/rosa\-del\-garda(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/rosso\-asiago(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/santiago\-red(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/segmentowe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/bramy-garazowe/bramy-segmentowe/ [R=301,L,NE]
+RewriteRule ^produkty/stalowe\-linia\-standard(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/parapet-stalowy/ [R=301,L,NE]
+RewriteRule ^produkty/stalowe\-linia\-zaokraglona(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-zewnetrzne/parapet-stalowy/ [R=301,L,NE]
+RewriteRule ^produkty/star\-galaxy(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/synergic(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^produkty/travertino(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/uchylne(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/bramy-garazowe/bramy-uchylne/ [R=301,L,NE]
+RewriteRule ^produkty/vector\-82md(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/okna-pcv/ [R=301,L,NE]
+RewriteRule ^produkty/venus(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-konglomerat-marmurowy/ [R=301,L,NE]
+RewriteRule ^produkty/w\-kasecie\-alu\-klaudia(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-w-kasecie-alu-klaudia/ [R=301,L,NE]
+RewriteRule ^produkty/w\-kasecie\-alu\-vegas\-classic(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-w-kasecie-alu-vegas-classic/ [R=301,L,NE]
+RewriteRule ^produkty/w\-kasecie\-alu\-vegas\-profil(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-w-kasecie-alu-vegas-profil/ [R=301,L,NE]
+RewriteRule ^produkty/w\-kasecie\-pcv\-vegas\-classic(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/rolety-wewnetrzne/rolety-w-kasecie-pcv-vegas-classic/ [R=301,L,NE]
+RewriteRule ^produkty/wiked\-drzwi\-zewnetrzne\-stalowe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/drzwi-zewnetrzne/ [R=301,L,NE]
+RewriteRule ^produkty/yellow\-pink(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/parapety-wewnetrzne/parapet-granitowy/ [R=301,L,NE]
+RewriteRule ^produkty/zaluzje\-drewniane(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/zaluzje-i-plisy/zaluzje-drewniane/ [R=301,L,NE]
+RewriteRule ^produkty/zaluzje\-fasadowe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/oslony-okienne/zaluzje-fasadowe/ [R=301,L,NE]
+RewriteRule ^produkty/zaluzje\-poziome\-aluminiowe(?:/index\.html|/)?$ https://wol-bud.com.pl/oferta/zaluzje-i-plisy/zaluzje-poziome-aluminiowe/ [R=301,L,NE]
+RewriteRule ^promocje/cieply\-montaz\-warstwowy\-okien\-drzwi(?:/index\.html|/)?$ https://wol-bud.com.pl/uslugi/cieply-montaz-warstwowy-okien-drzwi/ [R=301,L,NE]
+
+# THE_REQUEST avoids redirecting Apache internal DirectoryIndex requests.
+RewriteCond %{THE_REQUEST} \s/+[^?\s]*index\.html(?:[?\s]) [NC]
+RewriteRule ^(.*/)?index\.html$ https://wol-bud.com.pl/$1 [R=301,L,NE]
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$ https://wol-bud.com.pl/$1/ [R=301,L,NE]
+
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^wol-bud\.com\.pl(?::[0-9]+)?$ [NC]
+RewriteRule ^ https://wol-bud.com.pl%{REQUEST_URI} [R=301,L,NE]
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Strict-Transport-Security "max-age=604800"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests"
+  <FilesMatch "\.(?:css|js|webp|png|svg|woff2)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "-[a-f0-9]{12}(?:-[0-9]+)?\.(?:webp|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/ld+json application/xml text/xml image/svg+xml
+</IfModule>

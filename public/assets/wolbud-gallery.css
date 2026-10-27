@@ -1,0 +1,78 @@
+/* Motion is confined to the full gallery at /realizacje/. */
+.wb-gallery-page {
+  --gallery-gap: clamp(8px, 1.5vw, 24px);
+  --gallery-out: cubic-bezier(.16, 1, .3, 1);
+  --gallery-modal-out: cubic-bezier(.22, 1, .36, 1);
+  --gallery-spring: linear(0, .008, .032 2%, .13 4.4%, .26 6.6%, .681 13%, .891 17.1%, .968, 1.028, 1.073, 1.103 25.2%, 1.114, 1.119, 1.12, 1.115 31.4%, 1.098 34.4%, 1.042 41.6%, 1.017 45.4%, .998 49.5%, .988 53.9%, .986 60.4%, 1.001 80.9% 100%);
+}
+.wb-gallery-page .page-main { overflow: clip; }
+.wb-gallery-page .wb-masonry { column-gap: var(--gallery-gap); overflow: visible; }
+.wb-gallery-page .wb-masonry.is-grid-ready { display: grid; grid-template-columns: repeat(var(--gallery-columns, 3), minmax(0, 1fr)); columns: auto; align-items: start; gap: var(--gallery-gap); }
+.wb-gallery-column { display: flex; flex-direction: column; min-width: 0; gap: var(--gallery-gap); }
+.wb-gallery-item { min-width: 0; break-inside: avoid; margin-bottom: var(--gallery-gap); }
+.is-grid-ready .wb-gallery-item { margin-bottom: 0; }
+.wb-gallery-item[hidden], .wb-gallery-pool[hidden] { display: none !important; }
+.wb-card-reveal { transform-origin: center; }
+.wb-gallery-motion .wb-card-reveal:not(.is-entering):not(.is-revealed) { opacity: 0; transform: translate(var(--entry-x, 0px), var(--entry-y, 300px)) scale(var(--entry-scale, 1.5)); }
+.wb-card-reveal.is-entering { animation: wbGalleryArrive var(--entry-duration, 1.8s) var(--gallery-out) var(--entry-delay, 0s) both; will-change: transform, opacity; }
+.wb-card-reveal.is-revealed { opacity: 1; transform: none; }
+@keyframes wbGalleryArrive {
+  0% { opacity: 0; transform: translate(var(--entry-x, 0px), var(--entry-y, 300px)) scale(var(--entry-scale, 1.5)); }
+  5% { opacity: 1; }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+.wb-gallery-page .wb-masonry-card { margin: 0; border: 1px solid #0000000a; border-radius: 24px; corner-shape: superellipse(1.2); background: #f0f0f0; cursor: pointer; transform: none; box-shadow: 0 12px 31px #0000; transition: transform .65s var(--gallery-spring), box-shadow .65s var(--gallery-spring); }
+.wb-gallery-page .wb-masonry-card img, .wb-gallery-page .wb-masonry-card:hover img { transform: none; filter: none; transition: none; }
+@media (hover: hover) {
+  .wb-gallery-page .wb-masonry-card:hover { transform: scale(1.015); box-shadow: 0 12px 31px #0000001f; z-index: 2; }
+}
+.wb-gallery-page .wb-masonry-card:active { transform: scale(.97); box-shadow: 0 12px 31px #0000; transition-duration: .28s; }
+.wb-gallery-page .wb-masonry-card:after { opacity: 0; transition: opacity .25s ease; }
+.wb-gallery-page .wb-masonry-caption { opacity: 0; transform: translateY(5px); transition: opacity .25s ease, transform .4s var(--gallery-out); }
+.wb-gallery-page .wb-masonry-card:hover:after, .wb-gallery-page .wb-masonry-card:focus-visible:after { opacity: 1; }
+.wb-gallery-page .wb-masonry-card:hover .wb-masonry-caption, .wb-gallery-page .wb-masonry-card:focus-visible .wb-masonry-caption { opacity: 1; transform: none; }
+.wb-gallery-page .wb-masonry-open { display: none; }
+.wb-gallery-page .wb-gallery-filters button { transition: background .25s ease, color .25s ease, transform .4s var(--gallery-spring); }
+.wb-gallery-page .wb-gallery-filters button:active { transform: scale(.96); }
+html.wb-photo-open { overflow-y: hidden; scrollbar-gutter: stable; }
+.wb-gallery-page .wb-gallery-dialog { position: fixed; inset: 0; margin: 0; padding: 40px 56px; width: 100vw; max-width: none; height: 100dvh; max-height: none; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: hidden; }
+.wb-gallery-page .wb-gallery-dialog[open] { display: grid; place-items: center; animation: none; }
+.wb-gallery-page .wb-gallery-dialog::backdrop { background: #ffffff00; backdrop-filter: blur(0); transition: background .32s cubic-bezier(.4,0,.2,1), backdrop-filter .32s cubic-bezier(.4,0,.2,1); }
+.wb-gallery-page .wb-gallery-dialog.is-open::backdrop { background: #fffffffa; backdrop-filter: blur(12px); transition-duration: .576s; transition-delay: .072s; transition-timing-function: var(--gallery-modal-out); }
+.wb-gallery-view { position: relative; width: min(var(--photo-width, 960px), calc(100vw - 128px)); max-height: calc(100dvh - 80px); background: transparent; opacity: 0; filter: blur(3px); transform: scale(1.05); transition: opacity .24s cubic-bezier(.4,0,.2,1), filter .24s cubic-bezier(.4,0,.2,1), transform .24s cubic-bezier(.4,0,.2,1); }
+.is-open .wb-gallery-view { opacity: 1; filter: blur(0); transform: scale(1); transition-duration: .612s; transition-delay: .1s; transition-timing-function: var(--gallery-modal-out); }
+.wb-gallery-page .wb-gallery-stage { position: relative; display: block; padding: 0; width: 100%; height: auto; min-height: 0; touch-action: pan-y; }
+.wb-gallery-page .wb-gallery-stage img { display: block; width: 100%; max-width: 100%; height: auto; max-height: calc(100dvh - 136px); object-fit: contain; border-radius: 16px; box-shadow: 0 8px 32px #0000001f; cursor: grab; user-select: none; -webkit-user-drag: none; }
+.wb-gallery-page .wb-gallery-stage.is-dragging img { cursor: grabbing; }
+.wb-gallery-page .wb-gallery-dialog .wb-round { width: 40px; height: 40px; background: #fff; border: 0; color: #161b13; box-shadow: 0 2px 16px #00000014; transition: transform .65s var(--gallery-spring), background .2s; }
+.wb-gallery-page .wb-gallery-dialog .wb-round:hover { transform: scale(1.08); }
+.wb-gallery-page .wb-gallery-dialog .wb-round:active { transform: scale(.88); }
+.wb-gallery-page .wb-gallery-stage .wb-round { position: absolute; top: calc(50% - 20px); z-index: 2; }
+.wb-gallery-page .wb-gallery-stage .wb-round:first-child { left: -54px; }
+.wb-gallery-page .wb-gallery-stage .wb-round:last-child { right: -54px; }
+.wb-gallery-page .wb-gallery-close { position: fixed; top: 24px; right: 24px; z-index: 5; font-size: 25px; }
+.wb-gallery-page .wb-gallery-caption { display: flex; align-items: start; justify-content: space-between; gap: 24px; padding: 23px 0 0; color: #7b8075; }
+.wb-gallery-page .wb-gallery-caption strong { color: #252b1f; font-weight: 500; }
+.wb-gallery-cursor { position: fixed; top: 0; left: 0; z-index: 4; pointer-events: none; opacity: 0; transform: translate3d(var(--cursor-x,-48px),var(--cursor-y,-48px),0) translate(-50%,-50%); transition: opacity .12s ease-out; }
+.wb-gallery-cursor span { display: grid; place-items: center; width: 36px; height: 36px; background: #fff; box-shadow: 0 2px 16px #00000014; border-radius: 50%; font-size: 22px; line-height: 1; color: #161b13; transform: scale(0); transition: transform .22s var(--gallery-out); }
+.wb-gallery-dialog.has-close-cursor { cursor: none; }
+.wb-gallery-dialog.has-close-cursor .wb-gallery-cursor { opacity: 1; }
+.wb-gallery-dialog.has-close-cursor .wb-gallery-cursor span { transform: scale(1); transition-duration: .68s; transition-timing-function: var(--gallery-spring); }
+.wb-gallery-dialog.has-close-cursor.is-cursor-pressed .wb-gallery-cursor span { transform: scale(.88); transition-duration: .28s; }
+@media (max-width: 768px) {
+  .wb-gallery-page .wb-masonry-card { border-radius: 12px; }
+  .wb-gallery-page .wb-gallery-dialog { padding: 24px 16px; }
+  .wb-gallery-view { width: min(var(--photo-width,600px),calc(100vw - 32px)); max-height: calc(100dvh - 100px); }
+  .wb-gallery-page .wb-gallery-stage img { max-height: calc(100dvh - 136px); border-radius: 12px; }
+  .wb-gallery-page .wb-gallery-stage .wb-round { top: auto; bottom: 12px; background: #ffffffeb; }
+  .wb-gallery-page .wb-gallery-stage .wb-round:first-child { left: 12px; }
+  .wb-gallery-page .wb-gallery-stage .wb-round:last-child { right: 12px; }
+  .wb-gallery-page .wb-gallery-close { top: 16px; right: 16px; }
+  .wb-gallery-page .wb-gallery-caption { padding-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wb-gallery-page *, .wb-gallery-page *:before, .wb-gallery-page *:after { animation: none !important; transition: none !important; }
+  .wb-gallery-motion .wb-card-reveal { opacity: 1 !important; transform: none !important; }
+  .wb-gallery-view { filter: none !important; transform: none !important; }
+  .wb-gallery-page .wb-masonry-card:hover, .wb-gallery-page .wb-masonry-card:active { transform: none !important; }
+}
