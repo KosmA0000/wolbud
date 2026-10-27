@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wol-bud.com.pl/sitemap.xml
